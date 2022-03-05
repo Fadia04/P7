@@ -1,16 +1,6 @@
-import pytest
-from classes.wikiapi import Wiki_API
-from classes.google_api import Google_API
-from classes.wikiapi import Wiki_API
-import wikipedia
 
-"""   
-class MockResponseOk:
-    @staticmethod
-    def geosearch(latitude, longitude):
-        result =['Esplanade des Ouvriers-de-la-Tour-Eiffel',"L'esplanade des Ouvriers-de-la-Tour-Eiffel est une voie située dans le 7e arrondissement de Paris, en France." 
-        ,'https://fr.wikipedia.org/wiki/Esplanade_des_Ouvriers-de-la-Tour-Eiffel']
-        return result"""
+from classes.wikiapi import Wiki_API
+
 
 
 class MockPage:
@@ -22,9 +12,11 @@ class MockPage:
 class Test_WikiAPI:
     def mock_geosearch_ok(*args, **kwargs):
         result = [
-            "Montparnasse Rive Gauche",
-            "Montparnasse Rive Gauche  est un centre commercial français situé dans le quartier Necker du 15e arrondissement de Paris. Situé au pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
-            "https://fr.wikipedia.org/wiki/Montparnasse_Rive_Gauche",
+            ("Montparnasse Rive Gauche  est un centre commercial français situé"
+            " dans le quartier Necker du 15e arrondissement de Paris. Situé au"
+            " pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier"
+            " Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
+            "https://fr.wikipedia.org/wiki/Montparnasse_Rive_Gauche",)
         ]
         return result
 
@@ -34,7 +26,10 @@ class Test_WikiAPI:
 
     def mock_page_ok(*args, **kwargs):
         page = MockPage(
-            "Montparnasse Rive Gauche  est un centre commercial français situé dans le quartier Necker du 15e arrondissement de Paris. Situé au pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
+            "Montparnasse Rive Gauche  est un centre commercial français situé"
+            " dans le quartier Necker du 15e arrondissement de Paris. Situé au"
+            " pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier"
+            " Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
             "https://fr.wikipedia.org/wiki/Montparnasse_Rive_Gauche",
         )
         return page
@@ -44,7 +39,10 @@ class Test_WikiAPI:
         monkeypatch.setattr("wikipedia.geosearch", self.mock_geosearch_ok)
         monkeypatch.setattr("wikipedia.page", self.mock_page_ok)
         assert wikiapi.get_data() == (
-            "Montparnasse Rive Gauche  est un centre commercial français situé dans le quartier Necker du 15e arrondissement de Paris. Situé au pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
+            "Montparnasse Rive Gauche  est un centre commercial français situé"
+            " dans le quartier Necker du 15e arrondissement de Paris. Situé au"
+            " pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier"
+            " Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
             "https://fr.wikipedia.org/wiki/Montparnasse_Rive_Gauche",
         )
 

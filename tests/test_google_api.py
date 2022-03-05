@@ -1,5 +1,4 @@
 from pickle import NONE
-import pytest
 from classes.google_api import Google_API
 
 

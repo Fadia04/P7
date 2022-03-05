@@ -27,7 +27,10 @@ class Test_Manager:
 
     def mock_get_data(*args, **kwargs):
         result = (
-            "Montparnasse Rive Gauche  est un centre commercial français situé dans le quartier Necker du 15e arrondissement de Paris. Situé au pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
+            "Montparnasse Rive Gauche  est un centre commercial français situé"
+            " dans le quartier Necker du 15e arrondissement de Paris. Situé au"
+            " pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier"
+            " Tour Maine-Montparnasse. Il accueillait notamment les Galeries Lafayette Montparnasse.",
             "https://fr.wikipedia.org/wiki/Montparnasse_Rive_Gauche",
         )
         return result
@@ -51,7 +54,8 @@ class Test_Manager:
         monkeypatch.setattr("classes.parsers.Parser.get_keyword", self.mock_get_keyword)
         monkeypatch.setattr("googlemaps.Client", self.mock_google)
         monkeypatch.setattr(
-            "classes.google_api.Google_API.get_coordinates", self.mock_get_coordinates_nok
+            "classes.google_api.Google_API.get_coordinates",
+            self.mock_get_coordinates_nok,
         )
         assert gapi.get_response()["status"] == "nok"
 
@@ -62,9 +66,7 @@ class Test_Manager:
         monkeypatch.setattr(
             "classes.google_api.Google_API.get_coordinates", self.mock_get_coordinates
         )
-        monkeypatch.setattr(
-            "classes.wikiapi.Wiki_API.get_data", self.mock_get_data_nok
-        )
+        monkeypatch.setattr("classes.wikiapi.Wiki_API.get_data", self.mock_get_data_nok)
         assert wikiapi.get_response()["status"] == "nok"
 
     def test_should_get_response(self, monkeypatch):
@@ -79,13 +81,12 @@ class Test_Manager:
         assert manager.get_response()["status"] == "ok"
         assert manager.get_response()["latitude"] == 48.8421379
         assert manager.get_response()["longitude"] == 2.3219514
-        assert (
-            manager.get_response()["summary"]
-            == ("Montparnasse Rive Gauche  est un centre commercial français situé "
-                "dans le quartier Necker du 15e arrondissement de Paris. Situé au "
-                "pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier "
-                "Tour Maine-Montparnasse. Il accueillait notamment les Galeries "
-                "Lafayette Montparnasse.")
+        assert manager.get_response()["summary"] == (
+            "Montparnasse Rive Gauche  est un centre commercial français situé "
+            "dans le quartier Necker du 15e arrondissement de Paris. Situé au "
+            "pied de la tour Montparnasse, il fait partie de l'Ensemble Immobilier "
+            "Tour Maine-Montparnasse. Il accueillait notamment les Galeries "
+            "Lafayette Montparnasse."
         )
         assert (
             manager.get_response()["url"]
