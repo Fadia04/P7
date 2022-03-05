@@ -1,3 +1,7 @@
+
+"""
+Generic answers witch will be randomly choosen
+"""
 positive_responses = [
     "Bienvenue, nous avons trouvé une réponse pour ta question:",
     "Bonjour à toi, voici une réponse:",

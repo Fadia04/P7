@@ -9,18 +9,29 @@
   </head>
   <body>
     <header class="msger-header">
-      <h1>GRANDPY LE PAPY BOT</h1>
+      <div class="container py-5 text-center">
+        <h1 class="display-4 font-weight-bold">GRANDPY LE PAPY BOT</h1>
+        <p class="font-italic mb-0">Le papy robot qui vous aide dans vos déplacements</p>
+           
+      </div>
+      
        <div class="msger-header-title">
-       <i class="fas fa-comment-alt"></i> 
+       
        </div>
        <div class="msger-header-options">
-       <span><i class="fas fa-cog"></i></span>
+       
      </div>
    </header>
 
     <section class="msger">  
+      
     <main class="msger-chat">
-      <div class="msg left-msg">                
+      <div class="msg left-msg">
+        <div
+         class="msg-img"
+         style="background-image: url(https://img1.freepng.fr/20180811/hlb/kisspng-computer-icons-clip-art-online-chat-internet-bot-s-robot-face-icon-free-of-78-free-vector-emoji-5b6f90c3d8e580.1587807415340382118884.jpg)"
+         > </div> 
+                        
         <div onload="initMap()"></div>        
         </div>
                    
@@ -46,16 +57,25 @@
   
   </section>
 
-  <footer>
-    <p class="main_footer">
-      <p>Site créé par Fadia Medja</p>  
-      <p>Vous trouverez <a href="https://github.com/Fadia04/GrandPy">ici</a> le code source de ce projet.</p>
-    </p>           
-  </footer>
+  
+    <div class="main_footer">
+      <footer>
+        <div class="container">
+          <div class="row">
+            
+              <ul>
+                <li><p> Site créé par Fadia Medja</p></li>
+                <li><p>Vous trouverez <a href="https://github.com/Fadia04/Projet7">ici</a> le code source de ce projet.</p></li>
+              </ul>
+            </div>
+          </div>
+        
+               
+      </footer>
    
    <script src="static/script.js"></script>
    <script type="text/javascript" async defer
-         src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+         src="https://maps.googleapis.com/maps/api/js?key={{google_api_key}}&callback=initMap"></script>
     <style scoped>
         #map{height:300px;
         width: 100%}

@@ -5,10 +5,18 @@ from classes.messages import positive_responses, negative_responses
 from random import choice
 
 class Manager:
+    """This class manages Parse, Google_API and Wiki_API classes and uses private functions to get the final response
+    witch will be sended to the front end
+    """
     def __init__(self, question):
+        """The init function initialise the Parser"""
         self.parser = Parser(question)
 
     def get_response(self):
+        """This function uses the keyword if exists, the coordinates if exist and the wikipedia data if exist
+        to returns a dictionnary containg the status: ok or not ok, a positive or negative response choosen randomly
+        from the messages file, the coordinates and the summary and url of the place wanted by the user
+        """
         keyword = self._get_keyword()
 
         if keyword:
