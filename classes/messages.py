@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+"""
+Generic answers witch will be randomly choosen
+"""
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
 positive_responses = [
     "Bienvenue, nous avons trouvé une réponse pour ta question:",
     "Bonjour à toi, voici une réponse:",

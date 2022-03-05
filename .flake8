@@ -1,2 +1,7 @@
 [flake8]
+<<<<<<< HEAD
 max-line-length=119
+=======
+max-line-length=119
+exclude=env\
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d

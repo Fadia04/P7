@@ -1,9 +1,15 @@
 :root {
     --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --msger-bg: #fff;
+<<<<<<< HEAD
     --border: 2px solid #ddd;
     --left-msg-bg: #ececec;
     --right-msg-bg: #579ffb;
+=======
+    --border: 20px solid #ddd;
+    --left-msg-bg: #2384b1;
+    --right-msg-bg: #4073bb;
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
   }
   
   html {
@@ -20,8 +26,12 @@
   
   body {
     display: flex;
+<<<<<<< HEAD
     justify-content: center;
     align-items: center;
+=======
+    flex-direction: column;
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
     height: 100vh;
     background-image: var(--body-bg);
     font-family: Helvetica, sans-serif;
@@ -33,7 +43,11 @@
     justify-content: space-between;
     width: 100%;
     max-width: 867px;
+<<<<<<< HEAD
     margin: 25px 10px;
+=======
+    margin: auto;
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
     height: calc(100% - 50px);
     border: var(--border);
     border-radius: 5px;
@@ -41,6 +55,7 @@
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
   }
   
+<<<<<<< HEAD
   .msger-header {
     display: flex;
     justify-content: space-between;
@@ -48,6 +63,14 @@
     border-bottom: var(--border);
     background: rgb(119, 145, 168);
     color: rgb(28, 14, 153);
+=======
+  .msger-header {        
+    padding: 1em;
+    text-align: center;
+    border-bottom: var(--border);
+    background: rgb(30, 92, 150);
+    color: rgb(7, 6, 14);
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
   }
   
   .msger-chat {
@@ -59,10 +82,17 @@
     width: 6px;
   }
   .msger-chat::-webkit-scrollbar-track {
+<<<<<<< HEAD
     background: #ddd;
   }
   .msger-chat::-webkit-scrollbar-thumb {
     background: #bdbdbd;
+=======
+    background: rgb(46, 83, 163);
+  }
+  .msger-chat::-webkit-scrollbar-thumb {
+    background: rgb(46, 83, 163);
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
   }
   .msg {
     display: flex;
@@ -105,7 +135,14 @@
   .left-msg .msg-bubble {
     border-bottom-left-radius: 0;
   }
+<<<<<<< HEAD
   
+=======
+
+  .left-msg .msg-img {
+  margin: 0 0 0 10px;
+  }
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
   .right-msg {
     flex-direction: row-reverse;
   }
@@ -150,4 +187,18 @@
     background-color: #fcfcfe;
     
   }
+<<<<<<< HEAD
   
+=======
+  .main_footer {padding:50px 0;
+                color:#f0f9ff;
+                background-color:#282d32;
+  }
+  
+  .main_footer {padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+}
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d

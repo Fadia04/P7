@@ -18,7 +18,11 @@ async function postFormData(url, msgText){
       var lat= response.latitude;
       var lng= response.longitude;
       setTimeout(function(){appendMap(lat, lng);}, 3000);
+<<<<<<< HEAD
       //appendMap(lat, lng);
+=======
+      
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
   }
   else
   {
@@ -31,9 +35,15 @@ const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
+<<<<<<< HEAD
 // Icons made by Freepik from www.flaticon.com
 const BOT_IMG = "https://media.gettyimages.com/vectors/robot-face-icon-smiling-devil-face-emotion-robotic-emoji-vector-id819604502";
 const PERSON_IMG = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.w600.comps.canstockphoto.fr%2Fbrun-lignes-visage-rond-dessin-anim%25C3%25A9-illustration_csp64434926.jpg&imgrefurl=https%3A%2F%2Fwww.canstockphoto.fr%2Fbrun-lignes-visage-rond-dessin-anim%25C3%25A9-64434926.html&tbnid=blsdpCF4ms3JSM&vet=12ahUKEwj1qqaM6Mn1AhVPw7sIHeHaDBcQMyg9egQIARBb..i&docid=TduyBMlfpq-RLM&w=500&h=520&q=visage%20dessin%20anim%C3%A9%20icone&hl=fr&ved=2ahUKEwj1qqaM6Mn1AhVPw7sIHeHaDBcQMyg9egQIARBb";
+=======
+
+const BOT_IMG = "https://img1.freepng.fr/20180811/hlb/kisspng-computer-icons-clip-art-online-chat-internet-bot-s-robot-face-icon-free-of-78-free-vector-emoji-5b6f90c3d8e580.1587807415340382118884.jpg";
+const PERSON_IMG = "https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8=";
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
 const BOT_NAME = "GRANDPYBOT";
 const PERSON_NAME = "USER";
 
@@ -51,10 +61,16 @@ msgerForm.addEventListener("submit", event => {
 });
 
 function appendMessage(name, img, side, text) {
+<<<<<<< HEAD
   //   Simple solution for small apps
   const msgHTML = `
     <div class="msg ${side}-msg">
       <div class="msg-img" style="background-image: url(${img})"></div>
+=======
+  const msgHTML = `
+    <div class="msg ${side}-msg">
+      <div class="msg-img" style="background-image: url(${img});"></div>
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
 
       <div class="msg-bubble">
         <div class="msg-info">
@@ -72,7 +88,11 @@ function appendMessage(name, img, side, text) {
 }
 
 function appendMap(lat, lng) {
+<<<<<<< HEAD
   //   Simple solution for small apps
+=======
+  
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
   const msgHTML = `
         <div onload="initMap()"></div>
         <div id="map${index}" style="width:100%; height: 100%" </div>
@@ -85,8 +105,12 @@ function appendMap(lat, lng) {
 }
 
 function botResponse(response) {
+<<<<<<< HEAD
   //const r = random(0, BOT_MSGS.length - 1);
   //const msgText = BOT_MSGS[r];
+=======
+ 
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
   const msgText = response
 
   setTimeout(() => {

@@ -6,10 +6,18 @@ from random import choice
 
 QUESTION = "ou se trouve Montparnasse"
 class Manager:
+    """This class manages Parse, Google_API and Wiki_API classes and uses private functions to get the final response
+    witch will be sended to the front end
+    """
     def __init__(self, question):
+        """The init function initialise the Parser"""
         self.parser = Parser(question)
 
     def get_response(self):
+        """This function uses the keyword if exists, the coordinates if exist and the wikipedia data if exist
+        to returns a dictionnary containg the status: ok or not ok, a positive or negative response choosen randomly
+        from the messages file, the coordinates and the summary and url of the place wanted by the user
+        """
         keyword = self._get_keyword()
 
         if keyword:
@@ -47,6 +55,7 @@ class Manager:
         if response is not None:
             return response
         else:
+<<<<<<< HEAD
             return None
 
 
@@ -56,3 +65,6 @@ if __name__ == '__main__':
     #a.get_answer( 48.85837009999999, 2.2944813)
     #print(a.get_answer())
     #print(manager.get_response())
+=======
+            return None
+>>>>>>> afa3ce2cccc9609d925ed4674cfb213557abe24d
