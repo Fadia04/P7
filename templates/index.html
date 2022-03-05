@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <title>GrandPy</title>
-    </head>
-    <body>
-        <form method="post" action="">
-            <p>
-                <label for="myInput">Tapez votre question</label>
-                <input type="text" id = "myInput" maxlength="200"/>
-                <button type="button" onclick="getInputValue();">Get Value</button>     
-        </p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandPy</title>
+    <link href="static/style.css" rel="stylesheet" media="all" type="text/css"> 
+    
+</head>
+<body>
+   <h1></h1> 
+
+   <section class="msger">
+    <header class="msger-header">
+       <h1>GRANDPY LE PAPY BOT</h1>
+      <div class="msger-header-title">
+        <i class="fas fa-comment-alt"></i> 
+      </div>
+      <div class="msger-header-options">
+        <span><i class="fas fa-cog"></i></span>
+      </div>
+    </header>
+  
+    <main class="msger-chat">
+      <div class="msg left-msg">
         
-        <script src="static/script.js"></script>
+        
+        <div onload="initMap()"></div>
+        
+        </div>
+        
+           
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">GRANDPYBOT</div>
+            <div class="msg-info-time">12:45</div>
+          </div>
+  
+          <div class="msg-text">
+            Bonjour et bienvenue, quelle adresse cherchez-vous? 😄
+          </div>
+
+        </div>
+      </div>
+
+      
+  
+      <div class="msg right-msg">
+        <div
+         class="msg-img"
+         style="background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.findicons.com%2Fsearch%2Favatar&psig=AOvVaw1rbcc8FDAMW6UdvefIeLt1&ust=1643090773941000&source=images&cd=vfe&ved=2ahUKEwj3_Mqg3Mn1AhWJ8LsIHUx7CXEQjRx6BAgAEAk)"
+        ></div>
+
+        
+            
+        </div>
+      </div>
+      
+    </main>
+        
+  
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" name="msgerInput" placeholder="Entrez votre message...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    
     </form>
-    </body>
+     
+    
+
+  </section> 
+   <script src="static/script.js"></script>
+   <script type="text/javascript" async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGNSkOgIZ34i2OQ3-asFcMnntaUbfQFIg&callback=initMap"></script>
+    <style scoped>
+        #map{height:300px;
+        width: 100%}
+    </style>
+</body>
 </html>
+   
