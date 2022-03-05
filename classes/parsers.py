@@ -4,8 +4,8 @@ from classes.stopwords import stopwords
 
 
 class Parser:
-    """This class is allowed to parse the user's sentence/question and get the keyword
-    """
+    """This class is allowed to parse the user's sentence/question and get the keyword"""
+
     def __init__(self, question):
         self.question = question
         self.keywords = []
@@ -18,8 +18,7 @@ class Parser:
         self.remove_unless_word()
 
     def remove_unless_word(self):
-        """This function uses stopwords list to remove unless words from user's question
-        """
+        """This function uses stopwords list to remove unless words from user's question"""
         for word in self.question.split():
             if word not in stopwords:
                 self.keywords.append(word)
@@ -29,7 +28,7 @@ class Parser:
         self.question = self.question.lower()
 
     def remove_ponctuation(self):
-        """Function to remove punctuation from user's question """
+        """Function to remove punctuation from user's question"""
         self.question = re.sub(r"[^\w\s]", "", self.question)
 
     def remove_accents(self):
